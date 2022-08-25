@@ -201,3 +201,27 @@ useEffect(() => {
     console.log(blogs);
   }, []);
   [] <- gör att det bara används första gången man renderar hemsidan
+
+
+  läsa in JSON:
+  ny terminal:
+  npx json-server --watch data/db.json --port 8000
+
+  
+  Resources
+  http://localhost:8000/blogs
+  <-- detta kan vi nu använda fetch på!
+
+  Home
+  http://localhost:8000
+
+
+  https://www.youtube.com/watch?v=qdCHEUaFhBk
+  om fetch och .then osv 
+
+
+ERROR: blogs = null går ej att mappa --->
+const [blogs, setBlogs] = useState(null);
+  {blogs && <BlogList blogs={blogs} 
+
+  om blogs = false (null är false) så går den in på nästa funktion (BlogList)
