@@ -289,3 +289,7 @@ Vi behöver då definiera mer: exact path
         <Route path="/create">
           <Create />
         </Route>
+
+
+SWITCH - går från toppen till botten och letar.
+Gör en request till servern. 
