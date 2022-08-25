@@ -26,7 +26,8 @@ const Create = () => {
     }).then(() => {
       console.log("New blog added")
       setIsPending(false)
-      history.go(-1); //går tillbaka till sidan vi nyss var på
+      // history.go(-1); //går tillbaka till sidan vi nyss var på
+      history.push("/")
     })
 
     
