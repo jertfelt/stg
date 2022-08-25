@@ -14,6 +14,7 @@ const Home = () => {
       //array of data:
       // console.log(data)
       setBlogs(data);
+      setisLoading(false) 
     })
     console.log("useEffect runs");
   }, []);
@@ -21,6 +22,7 @@ const Home = () => {
 
   return ( 
     <div className="home">
+      {isLoading && <div>Loading...</div>}
       {blogs && <BlogList blogs={blogs} 
       title="Alla bloggar:" 
       >
