@@ -178,3 +178,12 @@ det andra paret curly braces indikerar ett objekt!
 
   GÅR OCKSÅ ATT SKRIVA:
    const BlogList = ({blogs, title}) => {
+
+
+
+
+Filtrerar altl som inte tas bort:
+const handleDelete = (id) => {
+    const newBlogs = blogs.filter(blog => blog.id !== id); 
+    setBlogs(newBlogs);
+  }
