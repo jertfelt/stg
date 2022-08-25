@@ -20,15 +20,20 @@ const Home = () => {
     id: 3}
   ])
 
+  const [name, setName] =useState("Daniel");
+
   const handleDelete = (id) => {
     const newBlogs = blogs.filter(blog => blog.id !== id); 
     setBlogs(newBlogs);
   }
 
   useEffect(() => {
+    //useState - rerender osv.
     console.log("useEffect runs");
-    console.log(blogs);
-  });
+    // console.log(blogs);
+    console.log(name)
+  }, [name]);
+  //nu blir name en dependency!
 
   return ( 
     <div className="home">
@@ -39,6 +44,8 @@ const Home = () => {
       <BlogList blogs={blogs.filter((blog) => blog.author === "Tova" )} 
       title="Tovas bloggar:"
       handleDelete={handleDelete}/>
+      <button onClick={() => setName("Simon")}>Byt namn</button>
+      <p>{name}</p>
     </div>
     );
 }

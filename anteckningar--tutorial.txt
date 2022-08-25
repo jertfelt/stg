@@ -193,3 +193,11 @@ useEffect(() => {
     console.log("useEffect runs")
   });
   används varje gång vi renderar
+  useEffect används alltså bara när vi renderar om - alltså när något ändrat tex
+
+    useEffect(() => {
+    //useState - rerender osv.
+    console.log("useEffect runs");
+    console.log(blogs);
+  }, []);
+  [] <- gör att det bara används första gången man renderar hemsidan
