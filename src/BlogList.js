@@ -9,6 +9,7 @@ const BlogList = (props) => {
         <div className="blog-preview" key={item.id}>
           <h2>{item.title}</h2>
           <p>Författare:  {item.author}</p>
+          <button onClick={() => handleDelete(blog.id)}>Ta bort</button>
         </div>
       ))}
   </div>  );
