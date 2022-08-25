@@ -1,0 +1,17 @@
+I React så jobbar vi i App.js
+I App.js så heter mjukvaran JSX, en variant av JS.
+
+Nedan: App() istället för app()
+className istället för class -> blir konverterat till class i HTML sedan
+
+function App() { return ( HÄR ÄR ALLTSÅ HTML-KOD! FAST MED JSX-SPRÅK)
+Tex: {logo} i img src, och <code></code> i en paragraf.
+}
+
+function App() {
+  return (
+    <div className="App">
+    <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
