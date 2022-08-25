@@ -16,6 +16,9 @@ const Home = () => {
       setBlogs(data);
       setisLoading(false) 
     })
+    .catch(error => {
+      console.log(error.message)
+    })
     console.log("useEffect runs");
   }, []);
   
