@@ -156,3 +156,8 @@ det andra paret curly braces indikerar ett objekt!
     setName("Oskar")
   }
   <- ovan re:renderar komponenten - där komponenten name har blivit uppdaterat från Tova till Oskar
+
+  image.png
+  image.png
+
+  bra att veta om: react developer tools - kolla på components, kolla på tex hooks och se hur det ändras
