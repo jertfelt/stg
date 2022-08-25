@@ -41,12 +41,13 @@
 }
 
 .home{
-  background-color: antiquewhite;
+  max-width:400px;
 }
 
 .blog-preview{
   padding:20px 26px;
   border-bottom: 2px solid #001155;
+ 
 }
 
 .blog-preview:hover{

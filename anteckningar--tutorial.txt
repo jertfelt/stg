@@ -161,3 +161,20 @@ det andra paret curly braces indikerar ett objekt!
   image.png
 
   bra att veta om: react developer tools - kolla på components, kolla på tex hooks och se hur det ändras
+
+
+  key={} <- viktigt för att kunna iterate blogs, key är unikt
+
+  I förra lektionen så renderade vi ut blogs i Home
+  I denna lektion så gör vi renderingen - bloglist - som en komponent som vi kan återanvända på olika sidor! 
+
+  Vi använder oss av PROPS, där vi passerar data från en komponent till en childcomponent
+
+
+  const BlogList = (props) => {
+  const blogs = props.blogs;
+  const title= props.title;
+  console.log(props, blogs, title)
+
+  GÅR OCKSÅ ATT SKRIVA:
+   const BlogList = ({blogs, title}) => {
