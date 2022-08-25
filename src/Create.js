@@ -4,13 +4,26 @@ const Create = () => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [author, setAuthor] = useState("Tova");
+  const [isPending, setIsPending] = useState(false)
 
   const handleSubmit = (e) => {
     //*default action: to prevent refresh:
     e.preventDefault();
     //*skapa en blogg:
     const blog = {title, body, author};
-    console.log(blog)
+    // console.log(blog)
+    setIsPending(true);
+    // vi lägger POST request här pga vi kommer bara använda det en gång på hela hemsidan, annars kan man göra som med useFetch
+    //url + second argument:
+    //second argument är att vi berättar att vi gör en POST och vi berättar att vi skickar JSON
+    fetch("http://localhost:8000/blogs", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(blog) //här omvandlar vi då JSON till en string
+    }).then(() => {
+      console.log("New blog added")
+      setIsPending(false)
+    })
   }
 
   return ( 
@@ -38,7 +51,8 @@ const Create = () => {
           <option value="Daniel">Daniel</option>
           <option value="Jonas">Jonas</option>
         </select>
-        <button>Lägg till</button>
+        {!isPending && <button>Lägg till</button>}
+        {isPending && <button disabled>Lägger till..</button>}
         {/* <p>{title}</p>
         <p>{body}</p>
         <p>{author}</p> */}

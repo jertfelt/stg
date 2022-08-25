@@ -1,30 +1,34 @@
-{ 
+{
   "blogs": [
-    {"title": "Blogga blogga med min kärlek", 
-    "body": "Lorem ipsum...", 
-    "author":"Tova", 
-    "id": 4
+    {
+      "title": "Blogga blogga med min kärlek",
+      "body": "Lorem ipsum...",
+      "author": "Tova",
+      "id": 4
     },
-    {"title": "Blogblogblog", 
-    "body": "Lorem ipsum...", 
-    "author":"Oskar", 
-    "id": 2
+    {
+      "title": "Blogblogblog",
+      "body": "Lorem ipsum...",
+      "author": "Oskar",
+      "id": 2
     },
-    {"title": "Bloghora bloghora", 
-    "body": "Lorem ipsum...", 
-    "author":"Jonas", 
-    "id": 3
+    {
+      "title": "Bloghora bloghora",
+      "body": "Lorem ipsum...",
+      "author": "Jonas",
+      "id": 3
     },
-    {"title": "Blogga-riiiii", 
-    "body": "Lorem ipsum...", 
-    "author":"Tova", 
-    "id": 1
+    {
+      "title": "Blogga-riiiii",
+      "body": "Lorem ipsum...",
+      "author": "Tova",
+      "id": 1
     },
-    {"title": "I'm blogg blog blog blogblogbg", 
-    "body": "Lorem ipsum...", 
-    "author":"Oskar", 
-    "id": 5
+    {
+      "title": "I'm blogg blog blog blogblogbg",
+      "body": "Lorem ipsum...",
+      "author": "Oskar",
+      "id": 5
     }
-    
   ]
 }
