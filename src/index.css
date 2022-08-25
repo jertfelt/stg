@@ -19,6 +19,7 @@
 .navbar h1{
   font-family: "Silkscreen";
   color: #001155;
+  margin-bottom:10px;
 }
 
 .navbar .links { 
@@ -55,9 +56,35 @@
 .blog-preview h2{
   font-size: 20px;
   color: #001155;
-  margin-bottom: 8px;
+  margin-bottom:10px;
 }
-
+.all-blogs{
+  margin-bottom:20px;
+}
 .blog-preview a{
   text-decoration: none;
+}
+
+
+/*BLOGDETAILS*/
+
+.blog-details h2{
+  font-family: "Silkscreen";
+  color: #001155;
+  font-size: 20px;
+  margin-bottom:10px;
+}
+.blog-details div{
+  margin: 20px 0;
+  background-color: aliceblue;
+  padding:3rem;
+}
+
+.blog-details button{
+  background-color: #001155;
+  color: white;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
 }

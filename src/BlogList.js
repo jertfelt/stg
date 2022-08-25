@@ -12,7 +12,7 @@ const BlogList = (props) => {
         <div className="blog-preview" 
         key={item.id}>
           <Link to={`/blogs/${item.id}`}>
-          <h2>{item.title}</h2>
+          <h2 className="all-blogs">{item.title}</h2>
           <p>Författare:  {item.author}</p>
           </Link>
         </div>
