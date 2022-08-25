@@ -145,3 +145,14 @@ det andra paret curly braces indikerar ett objekt!
   }
 
   e = event object i console
+
+
+  useState hook = gör att tex let name = "mario" kan ändras
+  (se Home.js)
+
+  const [name, setName] = useState("Tova");
+   const handleClick = (e) => {
+   
+    setName("Oskar")
+  }
+  <- ovan re:renderar komponenten - där komponenten name har blivit uppdaterat från Tova till Oskar
