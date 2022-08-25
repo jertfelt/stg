@@ -27,10 +27,8 @@ const Create = () => {
       console.log("New blog added")
       setIsPending(false)
       // history.go(-1); //går tillbaka till sidan vi nyss var på
-      history.push("/")
-    })
-
-    
+      history.push("/") //går till startsidan
+    })    
   }
 
   return ( 
