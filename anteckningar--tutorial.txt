@@ -1,6 +1,9 @@
 https://www.youtube.com/watch?v=pnhO8UaCgxg
 
-COMPONENTS - root component : App.js
+COMPONENTS - root component : App.js 
+dvs den första komponenten som renderas till DOM. Resterande komponenter är nested i den här komponenten:
+image.png
+image.png
 react jobbar med komponenter - en stycke kod är en komponent tex
 
 Bra att veta:
@@ -61,3 +64,42 @@ Dynamiska:
       <p>{Math.random()*10}</p> <- den här gör en funktion! :D
 
       <a href= {link}>Länk </a>
+
+
+sfc + tab = bra 
+
+
+      const Navbar = () => {
+  return (  
+    <nav className="navbar">
+      <h1>STG SPELAR SPEL</h1>
+      <div className="links">
+        <a href="/">Start</a>
+        <a href="/create">Ny blogg</a>
+      </div>
+    </nav>
+  );
+}
+ 
+export default Navbar;
+
+
+I App.js:
+import './App.css'; 
+import Navbar from "./Navbar";
+import Home from "./Home";
+
+function App() {
+ 
+
+  return (
+    <div className="App">
+      <Navbar />  <--- VIKTIGT : AVSLUTA
+     <div classname="content">
+    <Home />
+     </div>
+    </div>
+  );
+}
+
+export default App;
