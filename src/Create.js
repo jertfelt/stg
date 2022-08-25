@@ -5,10 +5,18 @@ const Create = () => {
   const [body, setBody] = useState("");
   const [author, setAuthor] = useState("Tova");
 
+  const handleSubmit = (e) => {
+    //*default action: to prevent refresh:
+    e.preventDefault();
+    //*skapa en blogg:
+    const blog = {title, body, author};
+    console.log(blog)
+  }
+
   return ( 
     <div className="create">
       <h2>Skriv en ny blogg!</h2>
-      <form>
+      <form onSubmit={handleSubmit}> 
         <label>Titel:</label>
         <input 
         type="text"
