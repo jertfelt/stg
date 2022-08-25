@@ -1,10 +1,13 @@
 import { useState } from "react";
+import { useHistory} from "react-router-dom";
 
 const Create = () => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [author, setAuthor] = useState("Tova");
-  const [isPending, setIsPending] = useState(false)
+  const [isPending, setIsPending] = useState(false);
+  //till för att klicka fram och tillbaka
+  const history = useHistory();
 
   const handleSubmit = (e) => {
     //*default action: to prevent refresh:
@@ -23,7 +26,10 @@ const Create = () => {
     }).then(() => {
       console.log("New blog added")
       setIsPending(false)
+      history.go(-1); //går tillbaka till sidan vi nyss var på
     })
+
+    
   }
 
   return ( 
