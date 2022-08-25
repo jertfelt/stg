@@ -1,17 +1,42 @@
+COMPONENTS - root component : App.js
+react jobbar med komponenter - en stycke kod är en komponent tex
+
+Bra att veta:
+I äldre versioner av React behöver man import React from 'react'
+
 I React så jobbar vi i App.js
-I App.js så heter mjukvaran JSX, en variant av JS.
+I App.js så heter mjukvaran JSX, en variant av JS, syntaxen är annorlunda. JSX gör att vi skapar HTML-styled komponenter, och det renderar HTML.
 
 Nedan: App() istället för app()
 className istället för class -> blir konverterat till class i HTML sedan
 
 function App() { return ( HÄR ÄR ALLTSÅ HTML-KOD! FAST MED JSX-SPRÅK)
 Tex: {logo} i img src, och <code></code> i en paragraf.
+{logo} anropas såhär: import logo from './logo.svg';
 }
 
 function App() {
   return (
-    <div className="App">
+    <div className="App"> <--notera camelSccript
     <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+
+
+På slutet står det alltid såhär: 
+export default App;
+
+kolla tex i index.js, där vi import App from "app"
+import App from './App';
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+
+Viktigt att exportera komponent så vi kan använda det någon annanstans också.
