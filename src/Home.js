@@ -3,10 +3,10 @@ import BlogList from "./BlogList"
 const Home = () => {
   const [blogs, setBlogs] = useState(null);
 
-  const handleDelete = (id) => {
-    const newBlogs = blogs.filter(blog => blog.id !== id); 
-    setBlogs(newBlogs);
-  }
+  // const handleDelete = (id) => {
+  //   const newBlogs = blogs.filter(blog => blog.id !== id); 
+  //   setBlogs(newBlogs);
+  // }
 
   //?går ej att använda async och wait i useEffect
   useEffect(() => {
@@ -16,7 +16,7 @@ const Home = () => {
     })
     .then((data) => {
       //array of data:
-      console.log(data)
+      // console.log(data)
       setBlogs(data);
     })
     console.log("useEffect runs");
@@ -27,7 +27,7 @@ const Home = () => {
     <div className="home">
       {blogs && <BlogList blogs={blogs} 
       title="Alla bloggar:" 
-      handleDelete={handleDelete}>
+      >
       </BlogList> }
       {/* <BlogList blogs={blogs.filter((blog) => blog.author === "Tova" )} 
       title="Tovas bloggar:"
