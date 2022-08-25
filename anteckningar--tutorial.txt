@@ -225,3 +225,16 @@ const [blogs, setBlogs] = useState(null);
   {blogs && <BlogList blogs={blogs} 
 
   om blogs = false (null är false) så går den in på nästa funktion (BlogList)
+
+
+
+Bra att veta om React:
+HTML-filen är tom - React renderar ut på den.
+Så när vi använder oss av React router så renderar vi ut nytt.
+= mindre tunga filer?
+
+image.png
+
+INSTALLERA REACT ROUTER:
+npm install react-router-dom
+ npm install react-router-dom@5
