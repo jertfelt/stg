@@ -2,6 +2,10 @@ import { useState } from "react";
 import BlogList from "./BlogList"
 const Home = () => {
   const [blogs, setBlogs] = useState([
+    {title: "Blogga blogga med min kärlek", 
+    body:"Lorem ipsum...", 
+    author:"Tova", 
+    id: 4},
     {title: "Kolla en blogg", 
     body:"Lorem ipsum...", 
     author:"Oskar", 
@@ -19,6 +23,7 @@ const Home = () => {
   return ( 
     <div className="home">
       <BlogList blogs={blogs} title="Alla bloggar:"></BlogList>
+      <BlogList blogs={blogs.filter((blog) => blog.author === "Tova" )} title="Tovas bloggar:"></BlogList>
     </div>
     );
 }
