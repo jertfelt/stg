@@ -123,3 +123,16 @@
   padding: 12px;
   border-radius: 6px;
 }
+.not-found h2{
+  font-size: 20px;
+  color: #001155;
+  margin-bottom: 30px;
+}
+.not-found{
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.not-found a{
+  text-decoration: none;
+}
