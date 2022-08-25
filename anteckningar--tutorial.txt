@@ -103,3 +103,16 @@ function App() {
 }
 
 export default App;
+
+
+
+CSS: 
+App.css är linkad till App.js, kommer ge styling till allt. Scopar inte! 
+Man kan använda CSS komponents, eller använda olika CSS-filer för olika mindra projekt.
+
+index.css är globalt - importeras till index.js, och är den första <style>taggen i HTML
+Vi tar därför bort App.css
+
+
+style={{}} 
+det andra paret curly braces indikerar ett objekt!
