@@ -116,3 +116,32 @@ Vi tar därför bort App.css
 
 style={{}} 
 det andra paret curly braces indikerar ett objekt!
+
+
+ <button onClick={handleClick}>Click me! Click meeee!</button>
+ går ej att passera argument som nedan: 
+
+ <button onClick={handleClick(yoshi)}
+
+ utan såhär:
+ 
+
+  const handleClickAgain = (name) => 
+  {
+    console.log("HELLO " + name)
+  }
+
+  return ( 
+   
+    <button onClick={()=> {
+      handleClickAgain("Tova")
+    }}>
+    Click me again</button>
+   </div>
+
+
+     const handleClick = (e) => {
+    console.log("Yaaay you clicked", e)
+  }
+
+  e = event object i console
