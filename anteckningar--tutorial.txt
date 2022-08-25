@@ -299,3 +299,10 @@ LINK blir a href i HTML
 
 
 När vi försöker göra en fetch men byter hemsida fort så blir det lite fel (Cant perfrom a react state update)
+
+
+
+ROUTE PARAMETER:
+tex:
+/blogs/123
+123 - id på bloggen vi vill se 
