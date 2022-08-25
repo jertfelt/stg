@@ -28,7 +28,6 @@ const Home = () => {
   }
 
   useEffect(() => {
-    //useState - rerender osv.
     console.log("useEffect runs");
     // console.log(blogs);
     console.log(name)
