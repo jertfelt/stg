@@ -1,3 +1,5 @@
+https://www.youtube.com/watch?v=pnhO8UaCgxg
+
 COMPONENTS - root component : App.js
 react jobbar med komponenter - en stycke kod är en komponent tex
 
@@ -14,6 +16,14 @@ function App() { return ( HÄR ÄR ALLTSÅ HTML-KOD! FAST MED JSX-SPRÅK)
 Tex: {logo} i img src, och <code></code> i en paragraf.
 {logo} anropas såhär: import logo from './logo.svg';
 }
+
+{} <-- Dynamiskt value
+tex: const title = "Welcome to the new blog";
+{title} ="Welcome to the new blog"
+
+JSX omvandlar nummer, strings och arrayer till en string - funkar dock inte för booleas och objekt.
+const likes = 50; <- funkar 
+const person = {name: Test, age: 30}; <- funkar inte
 
 function App() {
   return (
@@ -40,3 +50,14 @@ root.render(
 
 
 Viktigt att exportera komponent så vi kan använda det någon annanstans också.
+
+
+Dynamiska:
+   <h1>{title}</h1>
+      <p> Liked {likes} times</p>
+      <p>{"Hello, world"}</p>
+      <p>{10}</p>
+      <p>{[1,2,3,4]}</p>
+      <p>{Math.random()*10}</p> <- den här gör en funktion! :D
+
+      <a href= {link}>Länk </a>
