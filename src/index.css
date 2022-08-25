@@ -47,7 +47,6 @@
 .blog-preview{
   padding:20px 26px;
   border-bottom: 2px solid #001155;
- 
 }
 
 .blog-preview:hover{
@@ -57,4 +56,8 @@
   font-size: 20px;
   color: #001155;
   margin-bottom: 8px;
+}
+
+.blog-preview a{
+  text-decoration: none;
 }
