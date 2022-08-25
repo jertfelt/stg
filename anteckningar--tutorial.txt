@@ -238,3 +238,54 @@ image.png
 INSTALLERA REACT ROUTER:
 npm install react-router-dom
  npm install react-router-dom@5
+
+ i package:   "react-router-dom": "^5.3.3",
+
+
+ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+
+function App() {
+ 
+
+  return (
+    <Router>
+    <div className="App">
+      <Navbar />
+    <div className="content">
+      <Switch>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </div>
+    </div>
+    </Router>
+
+    
+  return (
+    <Router>
+    <div className="App">
+      <Navbar />
+    <div className="content">
+      <Switch>
+        <Route path="/">
+          <Home />
+        </Route>
+        <Route path="/create">
+          <Home />
+        </Route>
+      </Switch>
+    </div>
+    </div>
+    </Router>
+
+
+BLIR PROBLEM:
+"/" ingår ju i "/create", så /create leder då till Home.
+Vi behöver då definiera mer: exact path
+      <Route path="/">
+          <Home />
+        </Route>
+        <Route path="/create">
+          <Create />
+        </Route>
