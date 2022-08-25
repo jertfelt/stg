@@ -2,18 +2,16 @@ import {useState, useEffect} from "react";
 const useFetch = (url) =>{
 
   const [data, setData] = useState(null);
-  //ändrade från blogs till data så det går att återanvända!
   const [isLoading, setisLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(url)
-    //ändrade till url så vi kan fetcha olika
+    const abortCont = new AbortController();
+    //ovan hjälper oss att avbryta fetchen om användern byter sida
+    fetch(url, { signal: abortCont.signal })
     .then(res => {
-      // console.log(res)
-      //ok: true fetch is ok, we get data back
       if(!res.ok){
-        throw Error("Kunde inte ladda innehållet, prova att refresha hemsidan, eller hör av dig till sidans administratör.") //*syns i console log
+        throw Error("Kunde inte ladda innehållet, prova att ladda om sidan, eller hör av dig till sidans administratör.") //*syns i console log
       }
       return res.json()
     })
@@ -24,13 +22,19 @@ const useFetch = (url) =>{
     })
     .catch(error => {
       console.log(error.message)
+    //? nedan handlar om att det blir error för att man avbryter fetch och updpaterar komponenten
+      if (error.name === "AbortError"){
+        console.log("Fetch was aborted")
+      }
+    //? nedan handlar om tex nätverksproblem och inte att man avbryter fetch
       setError(error.message)
       setisLoading(false);
     })
     console.log("useEffect runs");
-  }, [url]);
-
-  //return kan vara array, objekt, boolean m.m.
+    return () => abortCont.abort();
+    //det här gör att vi pausar fetchen
+  }, 
+  [url]);
   return {data, isLoading, error}
 }
 

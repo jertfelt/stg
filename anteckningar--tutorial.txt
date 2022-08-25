@@ -293,3 +293,9 @@ Vi behöver då definiera mer: exact path
 
 SWITCH - går från toppen till botten och letar.
 Gör en request till servern. 
+
+
+LINK blir a href i HTML
+
+
+När vi försöker göra en fetch men byter hemsida fort så blir det lite fel (Cant perfrom a react state update)

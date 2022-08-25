@@ -6,8 +6,8 @@ const Navbar = () => {
     <nav className="navbar">
       <h1>STG SPELAR SPEL</h1>
       <div className="links">
-        <Link to="/">Start</Link>
-        <Link to="/create" 
+        <Link to ="/">Start</Link>
+        <Link to ="/create" 
         style={{
           color: "black", 
           backgroundColor: "cadetblue",
